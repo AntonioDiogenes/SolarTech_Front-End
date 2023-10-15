@@ -777,7 +777,11 @@
           <select id="pacotes" name="pacotes"> 
           </select>
           <br>
-          <label for="quantidade">Quantidade:</label>
+          <label for="quantidade">
+            Quantidade de placas adicionais:
+            <br>
+            <span class="subtitulo">(Informe o Numero de Placas Adicionais Desejadas)</span>
+          </label>
           <input type="number" id="quantidade" name="quantidade" required>
           <br>
           <label for="resultado">Resultado:</label>
@@ -786,7 +790,38 @@
       </form>
     </section> <!-- End Budget Section -->
 
-    
+    <!-- ======= economy Section ======= -->
+    <section id="economy" >
+      <h1>Economia</h1>
+      <h2>Calcule aqui a economia que voce tera ao comprar nosso produto</h2>
+
+      <form id="economy-form">
+          <label for="quantidadePlacas">Escolha o pacote:</label>
+          <select id="quantidadePlacas" name="quantidadePlacas"> 
+          </select>
+
+          <br>
+          <label for="quantidadeAdicional">
+            Quantidade de placas adicionais:
+            <br>
+            <span class="subtitulo">(Caso adquira mais placas além das que vêm no pacote)</span>
+          </label>
+          <input type="number" id="quantidadeAdicional" name="quantidadeAdicional" required>
+          
+          <br>
+          <label for="consumoMedio">
+            Consumo Medio(kWh):
+            <br>
+            <span class="subtitulo">(Informe o consumo médio da sua residência.)</span>
+          </label>
+          <input type="number" id="consumoMedio" name="consumoMedio" required>
+
+          <br>
+          <label for="resultadoEconomy">Resultado:</label>
+          <input type="number" id="resultadoEconomy" name="resultadoEconomy" disabled>
+          <button type="submit">Enviar</button>
+      </form>
+    </section> <!-- End economy Section -->
 
     <!-- ======= F.A.Q Section ======= -->
     <section id="faq" class="faq">

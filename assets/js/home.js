@@ -9,9 +9,19 @@ $(document).ready(function(){
             for (let content of contents){
                 var option = $("<option>");
                     option.val(content.valorFinal).text(content.nome);
-                    $("#pacotes").append(option);
+                    $("#pacotes").append(option);       
             }
-            
+            for (let content of contents){
+                var option = $("<option>");
+                    option.val(content.quantidadePlacas).text(content.nome);
+                    $("#quantidadePlacas").append(option);       
+            }
+            // for (let content of contents){
+            //     var option = $("<option>");
+            //         option.val(content.valorFinal).text(content.nome);
+            //         $("#pacotes").append(option);       
+            // }
+    //usar 3 for talvez nao seja tao eficiente porem e momentaneamente mais facil
         },
         error: function(xhr, status, error) {
             console.error("Erro na requisição:", status, error);
@@ -22,6 +32,11 @@ $(document).ready(function(){
 $('#budget-form').submit(function(event) {
     event.preventDefault();
     sendBudget();
+});
+
+$('#economy-form').submit(function(event) {
+    event.preventDefault();
+    sendEconomy();
 });
 
 function sendBudget(){
@@ -46,3 +61,26 @@ function sendBudget(){
 
 }
 
+function sendEconomy(){
+    var jsonContent = {
+        quantidadePlacas : $('#quantidadePlacas').val(),
+        quantidadePlacasAdicionais : $('#quantidadeAdicional').val(),
+        usoCliente : $('#consumoMedio').val()
+    }
+    //console.log(jsonContent);
+    $.ajax({
+        url: 'http://localhost:8000/api/economy', 
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify(jsonContent),
+        success: function(response) {
+            console.log(response);
+            //$('#resultadoEconomy').val(response).prop('disabled', true);
+            //pensar melhor na logica depois
+        },
+        error: function(error) {
+            console.error('Erro na requisição:', error);
+        }
+    });
+
+}

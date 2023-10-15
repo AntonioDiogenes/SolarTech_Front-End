@@ -812,6 +812,80 @@ section {
   border: 3px solid #1bb1dc;
 }
 
+/* economy Section
+--------------------------------*/
+#economy {
+  background: #fff;
+  background-size: cover;
+  padding: 40px 0;
+  text-align: center;
+}
+
+#economy h1 {
+  color: #2d2b46;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#economy h2 {
+  color: #2d2b46;
+  margin-bottom: 20px;
+}
+
+/* Estilos para o formulário dentro da seção de Economia */
+#economy form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#economy form label {
+  color: #2d2b46;
+  margin-bottom: 10px;
+}
+
+#economy form select,
+#economy form input[type="number"] {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 300px;
+  border: 3px solid #2d2b46;
+  color: #2d2b46;
+  background-color: #fff;
+}
+.subtitulo {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+}
+
+#economy form button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 8px 26px;
+  border-radius: 3px;
+  transition: 0.5s;
+  border: 3px solid #2d2b46;
+  color: #2d2b46;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#economy form button:hover {
+  background: #2d2b46;
+  border: 3px solid #2d2b46;
+  color: #fff;
+}
+
+
 /* Features Section
 --------------------------------*/
 #features {
