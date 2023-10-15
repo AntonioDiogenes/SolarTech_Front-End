@@ -133,7 +133,8 @@
         </div>
       </div>
 
-    </section><!-- End About Section -->
+    </section>
+    <!-- End About Section -->
 
     <!--
     <section id="services" class="services section-bg">
@@ -766,6 +767,27 @@
 
     </section><!-- End Pricing Section -->
 
+    <!-- ======= Budget Section ======= -->
+    <section id="budget" >
+      <h1>Orçamento</h1>
+      <h2>Faça aqui seu orçamento</h2>
+
+      <form id="budget-form">
+          <label for="pacotes">Escolha seu pacote:</label>
+          <select id="pacotes" name="pacotes"> 
+          </select>
+          <br>
+          <label for="quantidade">Quantidade:</label>
+          <input type="number" id="quantidade" name="quantidade" required>
+          <br>
+          <label for="resultado">Resultado:</label>
+          <input type="number" id="resultado" name="resultado" disabled>
+          <button type="submit">Enviar</button>
+      </form>
+    </section> <!-- End Budget Section -->
+
+    
+
     <!-- ======= F.A.Q Section ======= -->
     <section id="faq" class="faq">
       <div class="container" data-aos="fade-up">
@@ -966,9 +988,11 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/home.js"></script>
 
 </body>
 

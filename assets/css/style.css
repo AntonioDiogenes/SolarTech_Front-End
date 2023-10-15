@@ -745,6 +745,73 @@ section {
   border: 3px solid #1bb1dc;
 }
 
+/* budget Section
+--------------------------------*/
+#budget {
+  background: #2d2b46;
+  background-size: cover;
+  padding: 40px 0;
+  text-align: center;
+}
+
+#budget h1 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#budget h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Estilos para o formulário dentro da seção de Orçamento */
+#budget form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#budget form label {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#budget form select,
+#budget form input[type="number"] {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 300px;
+  border: 3px solid #fff;
+  color: #2d2b46;
+  background-color: #fff;
+}
+
+#budget form button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 8px 26px;
+  border-radius: 3px;
+  transition: 0.5s;
+  border: 3px solid #fff;
+  color: #fff;
+  background-color: #2d2b46;
+  cursor: pointer;
+}
+
+#budget form button:hover {
+  background: #1bb1dc;
+  border: 3px solid #1bb1dc;
+}
+
 /* Features Section
 --------------------------------*/
 #features {
