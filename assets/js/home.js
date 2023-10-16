@@ -74,9 +74,14 @@ function sendEconomy(){
         contentType: 'application/json',
         data: JSON.stringify(jsonContent),
         success: function(response) {
-            console.log(response);
-            //$('#resultadoEconomy').val(response).prop('disabled', true);
-            //pensar melhor na logica depois
+            console.log(response.economiaTotal);
+            if(response.economiaTotal < 0){
+                $('#economyOutput').text("produçao nao sera suficiente pra suprir sua demanda");
+            }else if(response.economiaTotal == 0){
+                $('#economyOutput').text("produçao igual a demanda seus custos serao zerados");
+            }else{
+                $('#economyOutput').text("produçao gera mais que a demanda o saldo sera positivo");
+            }
         },
         error: function(error) {
             console.error('Erro na requisição:', error);
